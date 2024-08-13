@@ -1,0 +1,9 @@
+services:
+  pocketbase:
+    container_name: pocketbase
+    build: .
+    volumes:
+      - ./app/migrations:/app/pb_migrations
+      - ./app/data:/app/pb_data
+    ports:
+      - 8080:8080
