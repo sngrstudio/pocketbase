@@ -2,6 +2,7 @@ services:
   pocketbase:
     container_name: pocketbase
     build: .
+    init: true
     volumes:
       - ./app/migrations:/app/pb_migrations
       - ./app/data:/app/pb_data
